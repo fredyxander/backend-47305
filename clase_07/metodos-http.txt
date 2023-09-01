@@ -1,0 +1,19 @@
+//RPC:
+// getProduct => obtener un producto
+// deleteUsers => eliminar un usuario
+
+***************
+//REST
+//metodos: GET, POST, PUT, DELETE
+ENDPOINTS:
+/users =>Realizar alguna operacion con usuarios
+/courses => endpoint para gestionar cursos
+/students => endpoint para gestionar estudiantes
+/products => endpoint para gestionar productos.
+
+POST /users   => Crear un usuario
+DELETE /courses   => Eliminar un curso
+GET /students  => Obtener el listado de estudiantes
+PUT /students  => Actualizar la informacion de un estudiante.
+
+MAL: POST  /addCourse
