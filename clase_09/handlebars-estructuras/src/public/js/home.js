@@ -1,0 +1,1 @@
+console.log("archivo js para la vista home");
