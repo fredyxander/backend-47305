@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "producto1",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC1"
+  },
+  {
+    "id": 2,
+    "title": "producto2",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC2"
+  },
+  {
+    "id": 3,
+    "title": "producto3",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC3"
+  },
+  {
+    "id": 4,
+    "title": "producto4",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC4"
+  },
+  {
+    "id": 5,
+    "title": "producto5",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC5"
+  },
+  {
+    "id": 6,
+    "title": "producto6",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC6"
+  },
+  {
+    "id": 7,
+    "title": "producto7",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC7"
+  },
+  {
+    "id": 8,
+    "title": "producto8",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC8"
+  },
+  {
+    "id": 9,
+    "title": "producto9",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC9"
+  },
+  {
+    "id": 10,
+    "title": "producto10",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC10"
+  }
+]
