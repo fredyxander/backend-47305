@@ -20,6 +20,7 @@ const courseSchema = new mongoose.Schema({
 
 courseSchema.pre(["find", "findOne"], function(next){
     this.populate("courseStudents");
+    // this.populate({ path: 'courseStudents', select: 'email' }); //seleccionando solo ciertos campos del documento
     next();
 });
 
