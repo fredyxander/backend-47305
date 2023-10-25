@@ -1,6 +1,11 @@
 import jwt from "jsonwebtoken";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const PRIVATE_KEY="coderSecretToken";
+export const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+
+export const PRIVATE_KEY="coderSecretToken";
 
 export const generateToken = (user)=>{
     const token = jwt.sign({name:user.name,email:user.email},PRIVATE_KEY,{expiresIn:"24h"});
