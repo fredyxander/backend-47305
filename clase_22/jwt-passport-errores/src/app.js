@@ -5,6 +5,7 @@ import path from "path";
 import { generateToken, validateToken } from "./utils.js";
 import passport from "passport";
 import { initializePassport } from "./config/passport.config.js";
+import { authenticate, authorize } from "./middlewares/auth.js";
 
 const port = 8080;
 const app = express();
@@ -20,12 +21,14 @@ app.listen(port,()=>console.log(`Server listening on port ${port}`));
 initializePassport();
 app.use(passport.initialize());
 
+
 app.post("/login", (req,res)=>{
     const user = req.body;
+    user.role="user";
     const token = generateToken(user);
     res.cookie("cookieToken",token,{httpOnly:true}).json({status:"success", message:"login exitoso"});
 });
 
-app.get("/profile", passport.authenticate("jwtAuth",{session:false}) , (req,res)=>{
+app.get("/profile", authenticate("jwtAuth") , authorize("user") ,(req,res)=>{
     res.json({result:req.user});
 });
