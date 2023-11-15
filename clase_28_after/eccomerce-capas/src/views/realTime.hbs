@@ -1,0 +1,20 @@
+<h1>Página de productos en vivo</h1>
+
+<h2>Formulario para crear un producto</h2>
+<form id="createProductForm">
+    <input type="text" placeholder="Nombre del producto" name="title"/>
+    <br/><br/>
+    <input type="number" placeholder="Precio del producto" name="price"/>
+    <br/><br/>
+    <input type="text" placeholder="Codigo del producto" name="code"/>
+    <br/><br/>
+    <button type="submit">Agregar producto</button>
+</form>
+
+<hr>
+
+<h2>Listado de productos</h2>
+<ul id="productList"></ul>
+
+<script src="socket.io/socket.io.js"></script>
+<script src="js/realTime.js"></script>
