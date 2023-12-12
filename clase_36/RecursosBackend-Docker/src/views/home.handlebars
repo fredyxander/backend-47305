@@ -1,0 +1,15 @@
+<div>
+    <h1>¡Bienvenido!, crea algunos usuarios</h1>
+    <form action="/api/users?redirect=1" method="post">
+        <label>Nombre</label>
+        <input name="first_name">
+        <label>Apellido</label>
+        <input name="last_name">
+        <label>Correo electrónico</label>
+        <input name="email">
+        <label>Contraseña </label>
+        <input  type="password" name="password">
+        <button>Crear usuario</button>
+    </form>
+    <a href="/users"><button>Ver usuarios creados</button></a>
+</div>
