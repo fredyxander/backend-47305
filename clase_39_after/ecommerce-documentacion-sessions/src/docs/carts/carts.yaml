@@ -1,0 +1,43 @@
+paths:
+  /api/carts/{cid}/purchase:
+    post:
+      summary: Endpoint para finalizar la compra del carrito
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          schema:
+            $type: string
+      responses:
+        "200":
+          description: Creacion del producto exitoso
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/SuccessPurchaseCart"
+        "401":
+          description: Usuario no autorizado
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/ErrorAuthorization"
+        "500":
+          description: fallo del servidor
+
+components:
+  schemas:
+    SuccessPurchaseCart:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+        rejectedProducts:
+          type: array
+      example:
+        status: "success"
+        message: "Compra realizada, algunos productos no se pudieron comprar por falta de stock"
+        rejectedProducts: []

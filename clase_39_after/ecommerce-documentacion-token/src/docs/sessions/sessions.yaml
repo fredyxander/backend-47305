@@ -1,0 +1,43 @@
+paths:
+  /api/sessions/login:
+    post:
+      summary: Endpoint para loguear al usuario
+      tags:
+        - Autenticacion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/Login"
+      responses:
+        "200":
+          description: Logueo exitoso
+        "500":
+          description: El servidor esta fallando
+
+components:
+  schemas:
+    ErrorAuthorization:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+      example:
+        status: "error"
+        message: "token invalido"
+  requestBodies:
+    Login:
+      type: object
+      properties:
+        email:
+          type: string
+          description: Correo del usuario
+        password:
+          type: string
+          description: Contraseña del usuario
+      example:
+        email: pepe@coder.com
+        password: coder
