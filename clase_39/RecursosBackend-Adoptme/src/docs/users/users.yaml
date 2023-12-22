@@ -1,0 +1,122 @@
+paths:
+  /api/users/:
+    get:
+      summary: Obtener todos los usuarios
+      tags:
+        - Usuarios
+      responses:
+        "200":
+          description: Los usuarios se obtuvieron correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/User"
+        "500":
+          description: Hubo un problema en el servidor
+  /api/users/{uid}:
+    get:
+      summary: Obtener la informacion de un usuario
+      tags:
+        - Usuarios
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          description: El id del usuario a consultar
+          schema:
+            $type: string
+      responses:
+        "200":
+          description: Se obtuvo correctamente el usuario
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/User"
+        "500":
+          description: Hubo un problema en el servidor
+    put:
+      summary: Actualizar el usuario
+      tags:
+        - Usuarios
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          description: El id del usuario a actualizar
+          schema:
+            $type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/createUpdateUser"
+      responses:
+        "200":
+          description: Se actualizo correctamente el usuario
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/UpdateSuccess"
+        "500":
+          description: Hubo un problema en el servidor
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: id generado por la base de datos (requerido*)
+        first_name:
+          type: string
+          description: Nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          description: Correo del usuario
+        password:
+          type: string
+          description: contraseña encriptada del usuario
+      example:
+        _id: ObjectId("$hjsg892778234sd")
+        first_name: Fredy
+        last_name: Chaparro
+        email: fredy@gmail.com
+        password: usy89127kjashd9123asd
+    UpdateSuccess:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+      example:
+        status: success
+        message: User updated
+  requestBodies:
+    createUpdateUser:
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: Nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          description: Correo del usuario
+        password:
+          type: string
+          description: contraseña encriptada del usuario
+      example:
+        first_name: Fredy
+        last_name: Chaparro
+        email: fredy@gmail.com
+        password: usy89127kjashd9123asd
