@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "title": "producto1",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC1",
+    "category":"Ropa",
+    "stock":20
+  },
+  {
+    "id": 2,
+    "title": "producto2",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC2",
+    "category":"Deportes",
+    "stock":10
+  },
+  {
+    "id": 3,
+    "title": "producto3",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC3",
+    "category":"Ropa",
+    "stock":4
+  },
+  {
+    "id": 4,
+    "title": "producto4",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC4",
+    "category":"Ropa",
+    "stock":35
+  },
+  {
+    "id": 5,
+    "title": "producto5",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC5",
+    "category":"Ropa",
+    "stock":5
+  },
+  {
+    "id": 6,
+    "title": "producto6",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC6",
+    "category":"Ropa",
+    "stock":10
+  },
+  {
+    "id": 7,
+    "title": "producto7",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC7",
+    "category":"Ropa",
+    "stock":0
+  },
+  {
+    "id": 8,
+    "title": "producto8",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC8",
+    "category":"Ropa",
+    "stock":15
+  },
+  {
+    "id": 9,
+    "title": "producto9",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC9",
+    "category":"Ropa",
+    "stock":10
+  },
+  {
+    "id": 10,
+    "title": "producto10",
+    "description": "ghjs da ghsd",
+    "price": 200,
+    "code": "ABC10",
+    "category":"Ropa",
+    "stock":12
+  },
+  {
+    "title": "producto11",
+    "price": 876,
+    "code": "kajshd",
+    "id": 11,
+    "category":"Ropa",
+    "stock":10
+  },
+  {
+    "title": "camisa",
+    "price": 9812,
+    "code": "kajsdh",
+    "id": 12,
+    "category":"Ropa",
+    "stock":17
+  }
+]
